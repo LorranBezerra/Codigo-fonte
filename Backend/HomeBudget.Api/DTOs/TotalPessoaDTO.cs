@@ -1,0 +1,13 @@
+namespace HomeBudget.Api.DTOs
+{
+    public class TotalPessoaDTO
+    {
+        public string Nome { get; set; } = string.Empty;
+
+        public decimal Receitas { get; set; }
+
+        public decimal Despesas { get; set; }
+
+        public decimal Saldo { get; set; }
+    }
+}
