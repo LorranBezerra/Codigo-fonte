@@ -14,7 +14,7 @@ Este projeto foi desenvolvido como forma de aprimorar conhecimentos em **React**
 
 ## 📸 Demonstração
 
-> Adicione aqui prints ou GIFs do sistema.
+
 
 | Dashboard | Transações |
 |-----------|------------|
