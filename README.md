@@ -145,7 +145,7 @@ Codigo-fonte
 
 ## Dashboard
 
-> *(Adicionar imagem aqui)*
+<img src="./screenshots/dashboard.png" width="900">
 
 ```
 images/dashboard.png
@@ -155,7 +155,7 @@ images/dashboard.png
 
 ## Cadastro de Pessoas
 
-> *(Adicionar imagem aqui)*
+<img src="./screenshots/pessoas.png" width="900">
 
 ```
 images/pessoas.png
@@ -165,7 +165,7 @@ images/pessoas.png
 
 ## Cadastro de Transações
 
-> *(Adicionar imagem aqui)*
+<img src="./screenshots/transacoes.png" width="900">
 
 ```
 images/transacoes.png
@@ -175,7 +175,7 @@ images/transacoes.png
 
 ## Totais
 
-> *(Adicionar imagem aqui)*
+<img src="./screenshots/totais.png" width="900">
 
 ```
 images/totais.png
@@ -185,7 +185,7 @@ images/totais.png
 
 ## Swagger
 
-> *(Adicionar imagem aqui)*
+<img src="./screenshots/Swagger.png" width="900">
 
 ```
 images/swagger.png
