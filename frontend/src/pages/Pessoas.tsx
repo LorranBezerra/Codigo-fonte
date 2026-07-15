@@ -21,7 +21,7 @@ export default function Pessoas() {
     
 
     async function carregarPessoas() {
-
+// Busca todas as pessoas cadastradas na API.
         const response = await api.get("/Pessoas");
 
         setPessoas(response.data);
@@ -29,7 +29,7 @@ export default function Pessoas() {
     }
 
     async function salvarPessoa() {
-
+// Envia uma nova pessoa para o backend.
         try {
 
             await api.post("/Pessoas", {
@@ -58,7 +58,7 @@ export default function Pessoas() {
     }
 
     async function excluir(id: number) {
-
+// Remove uma pessoa após confirmação do usuário.
         const result = await Swal.fire({
 
             title: "Excluir pessoa?",

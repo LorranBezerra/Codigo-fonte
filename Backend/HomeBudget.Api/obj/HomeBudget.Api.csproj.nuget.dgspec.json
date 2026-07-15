@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\HomeBudget.Api.csproj": {}
+    "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\HomeBudget.Api.csproj": {}
   },
   "projects": {
-    "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\HomeBudget.Api.csproj": {
+    "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\HomeBudget.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\HomeBudget.Api.csproj",
+        "projectUniqueName": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\HomeBudget.Api.csproj",
         "projectName": "HomeBudget.Api",
-        "projectPath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\HomeBudget.Api.csproj",
+        "projectPath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\HomeBudget.Api.csproj",
         "packagesPath": "C:\\Users\\João Vitor\\.nuget\\packages\\",
-        "outputPath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\obj\\",
+        "outputPath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\João Vitor\\AppData\\Roaming\\NuGet\\NuGet.Config"

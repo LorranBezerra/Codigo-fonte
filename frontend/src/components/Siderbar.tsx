@@ -9,11 +9,14 @@ export default function Sidebar() {
 
         <aside className="sidebar">
 
-            <div className="logo">
+            <div className="sidebar-logo">
 
-                <h2>HomeBudget</h2>
+                <img
+                    src="/Group 579.png"
+                    alt="Home Budget"
+                />
 
-                <span>Controle Financeiro</span>
+                <h3>Controle Finaceiro</h3>
 
             </div>
 

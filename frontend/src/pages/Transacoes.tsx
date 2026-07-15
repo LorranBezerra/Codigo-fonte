@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 interface Pessoa {
     id: number;
@@ -54,8 +55,22 @@ export default function Transacoes() {
 
             toast.success("Transação cadastrada com sucesso!");
         } catch (error: any) {
-            alert(error.response?.data ?? "Erro ao cadastrar.");
-        }
+
+    const mensagem =
+        error.response?.data?.mensagem ||
+        error.response?.data?.message ||
+        error.response?.data ||
+        "Erro ao cadastrar transação.";
+
+    Swal.fire({
+        icon: "error",
+        title: "Oops!",
+        text: mensagem,
+        confirmButtonText: "OK",
+        confirmButtonColor: "#0d6efd"
+    });
+
+}
     }
 
     useEffect(() => {

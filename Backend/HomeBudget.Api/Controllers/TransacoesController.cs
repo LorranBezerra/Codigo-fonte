@@ -4,6 +4,7 @@ using HomeBudget.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace HomeBudget.Api.Controllers
 {
     [ApiController]
@@ -20,7 +21,7 @@ namespace HomeBudget.Api.Controllers
         // GET: api/transacoes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Transacao>>> Listar()
-        {
+        {// Verifica se a pessoa informada existe.
             var transacoes = await _context.Transacoes
     .Include(t => t.Pessoa)
     .Select(t => new TransacaoResponseDTO
@@ -73,10 +74,11 @@ return Ok(transacoes);
             {
                 return BadRequest("Pessoas menores de idade só podem cadastrar despesas.");
             }
+        
 
             _context.Transacoes.Add(transacao);
             await _context.SaveChangesAsync();
-
+// Salva a transação após todas as validações.
             return Ok(transacao);
         }
     }

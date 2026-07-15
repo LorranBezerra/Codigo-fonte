@@ -1,10 +1,14 @@
+
+
 import { useEffect, useState } from "react";
 
-import api from "../services/api";
+import api from "../services/api"; // Carrega todas as informações exibidas no Dashboard.
 
 import CardResumo from "../components/CardResumo";
 
 import GraficoFinanceiro from "../components/GraficoFinanceiro";
+
+
 
 interface TotalPessoa {
 

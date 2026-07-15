@@ -19,7 +19,8 @@ namespace HomeBudget.Api.Controllers
 
         [HttpGet]
         public async Task<ActionResult<TotaisResponseDTO>> Consultar()
-        {
+        {// Calcula receitas, despesas e saldo individual
+// de cada pessoa cadastrada.
             var pessoas = await _context.Pessoas
                 .Include(p => p.Transacoes)
                 .ToListAsync();
@@ -42,6 +43,7 @@ namespace HomeBudget.Api.Controllers
                     Receitas = receitas,
                     Despesas = despesas,
                     Saldo = receitas - despesas
+                    // Calcula os totais gerais da aplicação.
                 });
 
                 resultado.TotalReceitas += receitas;

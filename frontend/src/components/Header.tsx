@@ -10,7 +10,7 @@ export default function Header() {
 
             <div>
 
-                <h2>Home Budget</h2>
+                <h2>Bem Vindo</h2>
 
                 <small>
 
@@ -27,7 +27,7 @@ export default function Header() {
 
             <div className="user">
 
-                <span>👤 Lorran Rodrigues</span>
+                <span>Lorran Rodrigues</span>
 
             </div>
 

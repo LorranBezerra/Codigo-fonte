@@ -11,14 +11,16 @@ builder.Services.AddControllers()
     });
 
 // Entity Framework + SQLite
+// Registra o banco SQLite utilizado pela aplicação.
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Swagger
+// Habilita o Swagger para documentação e testes da API.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// CORS
+// Permite que o frontend React consuma a API durante o desenvolvimento.
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactPolicy", policy =>

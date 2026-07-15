@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EXybYB/Bd/I=",
+  "dgSpecHash": "kaspTtrfJSs=",
   "success": true,
-  "projectFilePath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\HomeBudget.Api\\HomeBudget.Api.csproj",
+  "projectFilePath": "E:\\Projeto para o estagio\\Codigo-fonte\\backend\\Homebudget.api\\HomeBudget.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João Vitor\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\João Vitor\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.28\\microsoft.aspnetcore.openapi.8.0.28.nupkg.sha512",

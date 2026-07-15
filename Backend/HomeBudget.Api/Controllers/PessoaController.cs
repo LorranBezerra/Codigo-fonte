@@ -30,7 +30,7 @@ namespace HomeBudget.Api.Controllers
           Idade = p.Idade
          })
 
-      .ToListAsync();
+      .ToListAsync(); // Lista todas as pessoas cadastradas.
 
 return Ok(pessoas);
         }
@@ -62,7 +62,7 @@ public async Task<ActionResult<PessoaResponseDTO>> Criar(PessoaCreateDTO dto)
     }
 
     // Salva no banco
-    _context.Pessoas.Add(pessoa);
+    _context.Pessoas.Add(pessoa); // Cadastra uma nova pessoa.
     await _context.SaveChangesAsync();
 
     // Agora o Id já foi gerado pelo banco
@@ -87,7 +87,8 @@ public async Task<ActionResult<PessoaResponseDTO>> Criar(PessoaCreateDTO dto)
 
             _context.Pessoas.Remove(pessoa);
             await _context.SaveChangesAsync();
-
+// Remove uma pessoa e, devido ao Cascade Delete,
+// suas transações também serão excluídas.
             return NoContent();
         }
     }
