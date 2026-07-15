@@ -1,152 +1,250 @@
-# 💰 Sistema de Controle de Gastos
+<div align="center">
 
+# 🏠 Home Budget
+
+### Sistema de Controle de Gastos Residenciais
+
+Desenvolvido como teste técnico utilizando **ASP.NET Core (.NET 8)** no back-end e **React + TypeScript** no front-end.
+
+---
+
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap)
 
-Um sistema web para **controle financeiro pessoal**, desenvolvido com foco em organização, usabilidade e escalabilidade. O projeto permite gerenciar receitas, despesas e categorias, além de acompanhar indicadores financeiros por meio de um dashboard moderno e intuitivo.
-
-Este projeto foi desenvolvido como forma de aprimorar conhecimentos em **React**, **TypeScript** e boas práticas de desenvolvimento Front-end.
+</div>
 
 ---
 
-## 📸 Demonstração
+# 📖 Sobre o projeto
 
+O **Home Budget** é um sistema desenvolvido para realizar o controle de gastos residenciais, permitindo o gerenciamento de pessoas, receitas e despesas de forma simples e organizada.
 
-
-| Dashboard | Transações |
-|-----------|------------|
-| ![](docs/images/dashboard.png) | ![](docs/images/transacoes.png) |
-
-| Categorias | Configurações |
-|------------|---------------|
-| ![](docs/images/categorias.png) | ![](docs/images/configuracoes.png) |
+O projeto foi desenvolvido seguindo os requisitos de um teste técnico, aplicando boas práticas de desenvolvimento, separação entre front-end e back-end, persistência de dados e regras de negócio.
 
 ---
 
-# 🚀 Funcionalidades
+# ✨ Funcionalidades
 
-## 📊 Dashboard
+## 👤 Cadastro de Pessoas
 
-- Resumo financeiro
-- Saldo total
-- Total de receitas
-- Total de despesas
-- Indicadores rápidos
-- Cards informativos
-- Visualização organizada das informações
+- Cadastro de novas pessoas
+- Listagem de pessoas
+- Exclusão de pessoas
+- Exclusão automática das transações relacionadas (Cascade Delete)
 
 ---
 
-## 💳 Gerenciamento Financeiro
+## 💰 Cadastro de Transações
 
 - Cadastro de receitas
 - Cadastro de despesas
-- Edição de registros
-- Exclusão de registros
-- Pesquisa de movimentações
-- Organização das transações
+- Associação da transação a uma pessoa
+- Listagem das transações cadastradas
 
 ---
 
-## 📁 Categorias
+## 📊 Consulta de Totais
 
-- Cadastro de categorias
-- Organização por tipo
-- Edição
-- Exclusão
-- Identificação visual
+Exibe:
 
----
-
-## 🎨 Interface
-
-- Layout moderno
-- Sidebar responsiva
-- Header personalizado
-- Componentes reutilizáveis
-- Ícones utilizando React Icons
-- Interface limpa
-- Navegação intuitiva
+- Total de receitas por pessoa
+- Total de despesas por pessoa
+- Saldo individual
+- Total geral do sistema
 
 ---
 
-## ✨ Experiência do Usuário
+## 📈 Dashboard
 
-- Popups personalizados
-- Modais de confirmação
-- Feedback visual
-- Interface responsiva
-- Melhor organização dos elementos
-- Navegação fluida
+O Dashboard apresenta um resumo geral contendo:
+
+- Total de receitas
+- Total de despesas
+- Saldo geral
+- Quantidade de pessoas cadastradas
+- Últimas transações
+- Gráfico comparativo entre receitas e despesas
 
 ---
 
-# 🛠️ Tecnologias
+# 📌 Regras de Negócio
+
+O sistema implementa as seguintes regras:
+
+✔ Apenas pessoas cadastradas podem possuir transações.
+
+✔ Pessoas menores de 18 anos podem cadastrar apenas despesas.
+
+✔ O valor da transação deve ser maior que zero.
+
+✔ A descrição da transação é obrigatória.
+
+✔ Ao excluir uma pessoa, todas as suas transações são removidas automaticamente.
+
+✔ Os dados permanecem armazenados utilizando SQLite.
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+## Back-end
+
+- ASP.NET Core 8
+- C#
+- Entity Framework Core
+- SQLite
+- Swagger
+
+---
+
+## Front-end
 
 - React
 - TypeScript
 - Vite
+- Bootstrap
+- Axios
 - React Router DOM
 - React Icons
-- CSS3
-- HTML5
-- LocalStorage
+- React Hot Toast
+- SweetAlert2
+- Chart.js
 
 ---
 
 # 📂 Estrutura do Projeto
 
 ```
-src
+Codigo-fonte
 │
-├── assets/
+├── backend
+│   └── HomeBudget.Api
+│       ├── Controllers
+│       ├── Data
+│       ├── DTOs
+│       ├── Models
+│       ├── Migrations
+│       └── Program.cs
 │
-├── components/
-│   ├── Header/
-│   ├── Sidebar/
-│   ├── Modal/
-│   ├── Cards/
-│   ├── Button/
-│   ├── Table/
-│   └── ...
-│
-├── pages/
-│   ├── Dashboard/
-│   ├── Transactions/
-│   ├── Categories/
-│   ├── Settings/
-│   └── ...
-│
-├── hooks/
-│
-├── services/
-│
-├── types/
-│
-├── utils/
-│
-├── App.tsx
-│
-└── main.tsx
+└── frontend
+    ├── src
+    │   ├── components
+    │   ├── layouts
+    │   ├── pages
+    │   ├── services
+    │   ├── styles
+    │   └── App.tsx
 ```
 
 ---
 
-# ⚙️ Como Executar
+# 🖼️ Telas
 
-Clone o repositório
+## Dashboard
+
+> *(Adicionar imagem aqui)*
+
+```
+images/dashboard.png
+```
+
+---
+
+## Cadastro de Pessoas
+
+> *(Adicionar imagem aqui)*
+
+```
+images/pessoas.png
+```
+
+---
+
+## Cadastro de Transações
+
+> *(Adicionar imagem aqui)*
+
+```
+images/transacoes.png
+```
+
+---
+
+## Totais
+
+> *(Adicionar imagem aqui)*
+
+```
+images/totais.png
+```
+
+---
+
+## Swagger
+
+> *(Adicionar imagem aqui)*
+
+```
+images/swagger.png
+```
+
+---
+
+# 🚀 Como executar
+
+## Clone o repositório
 
 ```bash
 git clone https://github.com/LorranBezerra/Codigo-fonte.git
 ```
 
-Entre na pasta
+---
+
+## Backend
 
 ```bash
-cd Codigo-fonte
+cd backend/HomeBudget.Api
+```
+
+Instale as dependências
+
+```bash
+dotnet restore
+```
+
+Execute as migrations
+
+```bash
+dotnet ef database update
+```
+
+Inicie a API
+
+```bash
+dotnet run
+```
+
+A API estará disponível em:
+
+```
+http://localhost:5196
+```
+
+Swagger
+
+```
+http://localhost:5196/swagger
+```
+
+---
+
+## Front-end
+
+```bash
+cd frontend
 ```
 
 Instale as dependências
@@ -155,13 +253,13 @@ Instale as dependências
 npm install
 ```
 
-Execute o projeto
+Execute
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível em:
+Aplicação disponível em
 
 ```
 http://localhost:5173
@@ -169,116 +267,37 @@ http://localhost:5173
 
 ---
 
-# 📖 Objetivos do Projeto
+# 💡 Melhorias Implementadas
 
-O objetivo deste projeto foi aplicar na prática conceitos modernos de desenvolvimento Front-end utilizando React e TypeScript, desenvolvendo uma aplicação organizada, escalável e com foco na experiência do usuário.
+Além dos requisitos solicitados no desafio, foram adicionadas melhorias para proporcionar uma melhor experiência ao usuário:
 
-Durante o desenvolvimento foram trabalhados conceitos como:
-
-- Componentização
-- Organização de código
-- Tipagem com TypeScript
-- React Hooks
-- Layout Responsivo
-- Reutilização de Componentes
-- Estrutura escalável
-- UX/UI
-- Organização por módulos
+- Dashboard administrativo
+- Pesquisa em tempo real
+- Gráfico financeiro
+- Toasts para notificações
+- SweetAlert2 para confirmações e mensagens de erro
+- Sidebar com ícones
+- Layout responsivo
+- Cards informativos
+- Interface moderna baseada em Bootstrap
 
 ---
 
 # 📚 Conceitos Aplicados
 
-✅ React Components
+Durante o desenvolvimento foram utilizados conceitos como:
 
-✅ TypeScript
-
-✅ Componentização
-
-✅ Organização de Pastas
-
-✅ Responsividade
-
-✅ React Router
-
-✅ React Hooks
-
-✅ CSS Moderno
-
-✅ Estados
-
-✅ Props
-
-✅ Reutilização de Código
-
-✅ Interface Moderna
-
----
-
-# 💡 Principais Desafios
-
-Durante o desenvolvimento alguns desafios foram enfrentados, como:
-
-- Estruturar corretamente a arquitetura da aplicação.
-- Criar componentes reutilizáveis.
-- Desenvolver um layout responsivo.
-- Organizar o fluxo entre páginas.
-- Melhorar a experiência do usuário.
-- Padronizar toda a interface.
-
-Esses desafios contribuíram para aprofundar os conhecimentos em React e desenvolvimento Front-end.
-
----
-
-# 🔮 Melhorias Futuras
-
-- Login de usuários
-- Integração com API
-- Banco de Dados
-- Exportação em PDF
-- Exportação em Excel
-- Tema Dark Mode
-- Dashboard com gráficos avançados
-- Relatórios financeiros
-- Perfil do usuário
-- Controle mensal
-- Metas financeiras
-
----
-
-# 📈 Evolução do Projeto
-
-✔ Estrutura inicial
-
-✔ Organização das pastas
-
-✔ Criação do Layout
-
-✔ Sidebar
-
-✔ Header
-
-✔ Componentes reutilizáveis
-
-✔ Dashboard
-
-✔ Gerenciamento de transações
-
-✔ Categorias
-
-✔ Popups
-
-✔ Melhorias visuais
-
-✔ Responsividade
-
----
-
-# 🤝 Contribuição
-
-Contribuições são sempre bem-vindas.
-
-Caso tenha sugestões de melhorias, fique à vontade para abrir uma **Issue** ou enviar um **Pull Request**.
+- Programação Orientada a Objetos (POO)
+- REST API
+- Entity Framework Core
+- DTOs
+- Relacionamentos entre entidades
+- Cascade Delete
+- Consumo de API com Axios
+- Componentização no React
+- Hooks (`useState`, `useEffect`)
+- Organização em camadas
+- Boas práticas de desenvolvimento
 
 ---
 
@@ -286,28 +305,26 @@ Caso tenha sugestões de melhorias, fique à vontade para abrir uma **Issue** ou
 
 ### Lorran Rodrigues Bezerra
 
-🎓 Ciência da Computação — IFCE
+Estudante de Ciência da Computação - IFCE
 
-💼 Desenvolvedor de Software
+Desenvolvedor Full Stack
 
-📍 Fortaleza - CE
+📧 rodriguesbromen@gmail.com
 
-GitHub:
+🔗 GitHub
+
 https://github.com/LorranBezerra
 
-LinkedIn:
-https://www.linkedin.com/lorran-bezerra
+🔗 LinkedIn
+
+https://www.linkedin.com/in/lorran-bezerra
 
 ---
 
-# ⭐ Se este projeto foi útil
+<div align="center">
 
-Deixe uma ⭐ no repositório.
+### ⭐ Obrigado por visitar este projeto!
 
-Isso ajuda bastante e incentiva a evolução do projeto.
+Caso tenha alguma sugestão ou feedback, fique à vontade para entrar em contato.
 
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
+</div>
