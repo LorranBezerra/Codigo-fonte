@@ -145,7 +145,7 @@ Codigo-fonte
 
 ## Dashboard
 
-<img src="./screenshots/dashboard.png" width="900">
+<img src="./screenshots/Dashboard.png" width="900">
 
 ```
 images/dashboard.png
@@ -155,7 +155,7 @@ images/dashboard.png
 
 ## Cadastro de Pessoas
 
-<img src="./screenshots/pessoas.png" width="900">
+<img src="./screenshots/Pessoas.png" width="900">
 
 ```
 images/pessoas.png
@@ -165,7 +165,7 @@ images/pessoas.png
 
 ## Cadastro de Transações
 
-<img src="./screenshots/transacoes.png" width="900">
+<img src="./screenshots/Transacoes.png" width="900">
 
 ```
 images/transacoes.png
@@ -175,7 +175,7 @@ images/transacoes.png
 
 ## Totais
 
-<img src="./screenshots/totais.png" width="900">
+<img src="./screenshots/Totais.png" width="900">
 
 ```
 images/totais.png
